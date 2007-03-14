@@ -587,8 +587,7 @@ function legal_login_submit($form_id, $form_values) {
     
     user_module_invoke('login', $edit, $user);
     
-    drupal_goto('user/'. $user->uid);
-    return;
+    return 'user/'. $user->uid;
 }
 
 function theme_legal_login($form) {
