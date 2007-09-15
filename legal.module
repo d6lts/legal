@@ -22,7 +22,7 @@ function legal_perm() {
 
 function legal_access($op, $node) {
 
-  if ($op == 'view' && ( user_access('view Terms and Conditions') || user_access('administer Terms and Conditions') ) ) return TRUE;
+  if ($op == 'view' && (user_access('view Terms and Conditions') || user_access('administer Terms and Conditions') ) ) return TRUE;
 }
 
 function legal_menu($may_cache) {
@@ -500,11 +500,18 @@ function legal_user($op, &$edit, &$account, $category = FALSE) {
         $conditions = legal_get_conditions();
         if (empty($conditions['conditions'])) return;
         
-        $edit['legal_accept'] = NULL;      
-        if ($account->uid != $user->uid) break;
+        $edit['legal_accept'] = NULL;
+        $edit['conditions'] = NULL;
+        
+        foreach ($conditions['extras'] as $key => $label) {
+            $edit[$key] = NULL;
+        }
+        
+        if ($account->uid != $user->uid) break;     
         
         // if already accepted skip data entry
         $accepted = legal_version_check($account->uid, $conditions['tc_id']);
+        
         if ($accepted == TRUE) break;
         
         legal_save_accept($account->uid, $conditions['tc_id']);
@@ -516,6 +523,13 @@ function legal_user($op, &$edit, &$account, $category = FALSE) {
         if (empty($conditions['conditions'])) return;
         
         $edit['legal_accept'] = NULL;
+        
+        $edit['conditions'] = NULL;
+         
+        foreach ($conditions['extras'] as $key => $label) {
+          $edit[$key] = NULL;
+        }
+
         // don't insert if user is already registered (administrator)
         if (!empty($user->uid)) break;
 

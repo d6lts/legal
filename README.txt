@@ -50,16 +50,31 @@ CONFIGURATION
 	2. Go to Administer > Site configuration > Legal
 
 	   Input your terms & conditions text, set how you would like it
-        displayed
+     displayed:
 
 	- Scroll Box - Standard form text box (read only) Text is entered
-       and displayed as text only
+    and displayed as text only
 
 	- Scroll Box (CSS) - Scrollable text box created in CSS Text should
-       be entered with HTML formatting. 
+    be entered with HTML formatting. 
        (less accessible than a standard scroll box)
 
 	- HTML Text - Terms & conditions displayed as HTML formatted text
        Text should be entered with HTML formatting
+       
+       
+       
+********************************************************************
+ACKNOWLEDGEMENTS
+
+* Drupal 5 update sponsorship
+Lullabot (http://www.lullabot.com)
+
+
+* User data variables clean up
+Steven Wittens (Steven)
+
+
+
 
 
