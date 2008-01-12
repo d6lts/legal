@@ -11,17 +11,20 @@ DESCRIPTION:
 	A module which displays your Terms & Conditions to users who want to
     register, and makes sure they accept the T&C before their registration
     is accepted.
-
-	Note: No T&C will be displayed until the T&C text has been input by
-                the administrator.
     
     Each time a new version of the T&C is created all users will be required to 
     accept the new version.
 
-   Note: T&C text should only be entered by administrators or other highly trusted users.
+   Note: 
+          * T&C text should only be entered by administrators or other highly trusted users.
              filter_xss_admin() is used to filter content for display, this is a very permissive 
              XSS/HTML filter intended for admin-only use.
 
+          * No T&C will be displayed until the T&C text has been input by
+             the administrator.
+
+          * Legal module is incompatible with SecureSite module, the two should not be 
+             used on the same site.
 
 
 ********************************************************************
