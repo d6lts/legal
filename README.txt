@@ -4,7 +4,7 @@ D R U P A L    M O D U L E
 Name: Legal Module 
 Author: Robert Castelo
 Sponsor: Code Positive [www.codepositive.com]
-Drupal: 6.0.x
+Drupal: 5.0.x
 ********************************************************************
 DESCRIPTION:
 
@@ -31,8 +31,6 @@ INSTALLATION:
     check the Drupal web site if you need assistance.  If you run into
     problems, you should always read the INSTALL.txt that comes with the
     Drupal package and read the online documentation.
-
-      Dependencies: checkbox_validate Module  
 
 	1. Place the entire legal directory into your Drupal
         modules/directory.
