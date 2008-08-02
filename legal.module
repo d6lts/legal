@@ -569,7 +569,7 @@ function legal_login($uid, $id_hash = NULL) {
     
     $form['save'] = array(
         '#type' => 'submit',
-        '#value' => t('Save'),
+        '#value' => t('Confirm'),
     );
     
     return $form;
