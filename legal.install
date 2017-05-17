@@ -159,6 +159,13 @@ function legal_update_6003() {
 }
 
 /**
+ * Clear the menu cache.
+ */
+function legal_update_6004() {
+  menu_rebuild();
+}
+
+/**
  * Implementation of hook_uninstall().
  */
 function legal_uninstall() {
