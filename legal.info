@@ -4,3 +4,9 @@ dependencies[] = checkbox_validate
 core = 6.x
 
 
+
+; Information added by Drupal 6 LTS vendors on 2017-05-17
+version = "6.x-8.7"
+core = "6.x"
+project = "legal"
+datestamp = "1495031785"
